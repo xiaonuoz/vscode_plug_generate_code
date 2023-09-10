@@ -2,7 +2,9 @@
   "name": "singo-api-maker",
   "displayName": "singo_api_maker",
   "description": "生成singo脚手架的api",
+  "publisher": "xiaonuo",
   "version": "0.0.1",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.82.0"
   },
