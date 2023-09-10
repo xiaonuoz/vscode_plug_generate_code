@@ -1,0 +1,90 @@
+{
+  "name": "singo-api-maker",
+  "displayName": "singo_api_maker",
+  "description": "生成singo脚手架的api",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:getFileState"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.generateAddParam",
+        "title": "生成 param"
+    },
+    {
+        "command": "extension.generateAddModel",
+        "title": "生成 model"
+    },
+    {
+        "command": "extension.generateAddService",
+        "title": "生成 service"
+    },
+    {
+        "command": "extension.generateAddHandler",
+        "title": "生成 handler"
+    },
+    {
+        "command": "extension.generateAddSDK",
+        "title": "生成 sdk"
+    }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorFocus",
+          "command": "extension.generateAddParam",
+          "group": "navigation",
+          "title": "生成 param"
+      },
+      {
+          "when": "editorFocus",
+          "command": "extension.generateAddModel",
+          "group": "navigation",
+          "title": "生成 model"
+      },
+      {
+          "when": "editorFocus",
+          "command": "extension.generateAddService",
+          "group": "navigation",
+          "title": "生成 service"
+      },
+      {
+          "when": "editorFocus",
+          "command": "extension.generateAddHandler",
+          "group": "navigation",
+          "title": "生成 handler"
+      },
+      {
+          "when": "editorFocus",
+          "command": "extension.generateAddSDK",
+          "group": "navigation",
+          "title": "生成 sdk"
+      }
+      ]
+    }
+},
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "@vscode/test-electron": "^2.3.4"
+  }
+
+}
